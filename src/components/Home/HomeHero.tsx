@@ -17,7 +17,7 @@ function HomeHero({ title, description}: PropTypes) {
     <header className="lg:min-h-screen lg:-mt-20 px-6 max-w-6xl mx-auto flex">
       <div className="w-full m-auto lg:flex">
         <div className="w-100 lg:w-1/2 flex py-6">
-          <div style={{ aspectRatio: "1/1", maxWidth: 600 }} className="relative m-auto w-full rounded-2xl overflow-hidden opacity-5">
+          <div style={{ aspectRatio: "1/1", maxWidth: 600 }} className="relative m-auto w-full rounded-2xl overflow-hidden">
             <Image src={gif} alt={"CryptoDicks"} layout="fill" />
           </div>
         </div>
@@ -27,7 +27,6 @@ function HomeHero({ title, description}: PropTypes) {
           </h1>
           <p className="text-lg sm:text-2xl sm:leading-10 font-medium mb-6 	">
             {description}
-            10,000 unique NTFs with proof of ownership living on the Polygon blockchain and following the ERC-721 standard, but yeah, these are DICKs.
           </p>
 
           <div className="flex flex-wrap mt-6">
