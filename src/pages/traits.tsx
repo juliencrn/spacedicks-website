@@ -38,7 +38,7 @@ const Traits: NextPage<{ traits: ImagesByTrait[] }> = ({ traits }) => {
                 onClick={() => setSelected(option)}
               >
                 <div style={{ aspectRatio: "1/1", maxWidth: 300 }} className="relative m-auto w-full overflow-hidden rounded-lg">
-                  <Image src={option.url} alt={trait.name + " - " + option.name} layout="fill" />
+                  <img src={option.url} alt={trait.name + " - " + option.name} />
                 </div>
                 <span className="font-mono text-sm">
                   {option.name} ({option.rarity.toFixed(2) + "%"})
