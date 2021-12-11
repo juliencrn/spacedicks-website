@@ -1,8 +1,8 @@
 const isDev = process.env.NODE_ENV === "development"
 
-export const contractAddress = "0x12ecD47A9D8d36F9CaCdc192FD5FaF557C258538"
+export const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
-export const API_URL = isDev ? "http://localhost:3001" : "https://cryptodicks-api.herokuapp.com"
+export const API_URL = isDev ? "http://localhost:3001" : process.env.NEXT_PUBLIC_API_URL
 export const title = "CryptoDicks"
 export const description = '10,000 unique NTFs with proof of ownership living on the Polygon blockchain and following the ERC-721 standard, but yeah, these are DICKs.'
 
@@ -15,4 +15,4 @@ export const mediaQueries = {
   "2xl": "1536px",
 }
 
-export const openSeaCollectionUrl = "https://testnets.opensea.io/collection/cryptodicks-zfaxbhfvgc"
+export const openSeaCollectionUrl = process.env.NEXT_PUBLIC_OPENSEA_LINK
