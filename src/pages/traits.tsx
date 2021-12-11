@@ -55,7 +55,7 @@ const Traits: NextPage<{ traits: ImagesByTrait[] }> = ({ traits }) => {
           open={modalOpen} 
           content={(
             <div style={{ aspectRatio: "1/1", maxWidth: 500 }} className="relative m-auto w-full overflow-hidden rounded-lg">
-              <Image src={selected.url} alt={"CryptoDicks"} layout="fill" />
+              <img src={selected.url} alt={"CryptoDicks"} />
             </div>
           )} 
           onClose={closeModal}
