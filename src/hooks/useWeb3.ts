@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react"
 import { useEffectOnce } from "usehooks-ts"
 import { AbiItem } from "web3-utils"
 
-import CryptoDicks from '../contracts/CryptoDicks.json'
+import SpaceDicks from '../contracts/SpaceDicks.json'
 
 export const injected = new InjectedConnector({
   supportedChainIds: [
@@ -51,9 +51,9 @@ function useWeb3() {
 
   const getContract = useCallback(async () => {
     const networkId = await web3.eth.net.getId();
-    const networkData = (CryptoDicks.networks as Record<string, { address: string }>)[networkId];
+    const networkData = (SpaceDicks.networks as Record<string, { address: string }>)[networkId];
     return new web3.eth.Contract(
-      CryptoDicks.abi as AbiItem | AbiItem[],
+      SpaceDicks.abi as AbiItem | AbiItem[],
       networkData.address
     )
     // eslint-disable-next-line react-hooks/exhaustive-deps

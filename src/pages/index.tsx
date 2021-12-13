@@ -6,7 +6,7 @@ import FeaturesSection from '../components/Home/FeaturesSection'
 import HomeHero from '../components/Home/HomeHero'
 import GridSection from '../components/Home/GridSection'
 import TextSection from '../components/TextSection'
-import { contractAddress, description, openSeaCollectionUrl, title } from '../config'
+import { contractAddress, description, githubUrl, openSeaCollectionUrl, polygonScanUrl, title, twitterUrl } from '../config'
 
 const Home: NextPage<{ images: string[][] }> = ({ images }) => {
   return (
@@ -24,17 +24,17 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
       <GridSection images={images[1]} />
       
       <TextSection 
-        title="what is CryptoDicks?" 
+        title="what is SpaceDicks?" 
         text={(
           <p>
-            The CryptoDicks are a collection of 10,000 uniquely generated dicks as high quality SVG images. 
+            The SpaceDicks are a collection of 10,000 uniquely generated dicks as high quality SVG images. 
             No two are exactly alike, and each one of them can be officially owned by a single person on the Polygon blockchain.
             Until all are mined, everyone can mint its one.
           </p>
         )}
       />
-      <TextSection title="how can I mint my CryptoDick?" text={(
-        <ol className="list-decimal pl-6">
+      <TextSection title="how can I mint my SpaceDicks?" text={(
+        <ol className="list-decimal leading-8 pl-6">
           <li>
             Download and install the <a href="https://metamask.io/" target="_blank" rel="noreferrer">MetaMask</a> wallet, a Chrome/Firefox browser extension.
             <br />
@@ -42,22 +42,22 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
           </li>
           <li>If you made a new account, you have to buy some Ether.</li>
           <li>{'Once you have the plugin installed, this website will recognize it and you can connect by clicking on the button "Connect"'}</li>
-          <li>Once you are connected, you can mint your own CryptoDicks token! 🎉 <br />It will cost you 0.01 ether more some network fee.</li>
-          <li>Finally, you can see your DICK in your wallet or in the <a href="https://opensea.io/" target="_blank" rel="noreferrer">OpenSea</a> NFT marketplace.</li>
+          <li>Once you are connected, you can mint your own SpaceDicks token! 🎉 <br />It will cost you 0.01 ether more some network fee.</li>
+          <li>Finally, you can see your DICK in your wallet or in the <a href={openSeaCollectionUrl} target="_blank" rel="noreferrer">OpenSea</a> NFT marketplace.</li>
         </ol>
       )} />
 
-      <TextSection title="how I can buy/sell CryptoDicks?" text={(
+      <TextSection title="how I can buy/sell SpaceDicks?" text={(
         <p>
-          Like every ERC-721 tokens, you can exchange them on the secondary market using the <a href="https://opensea.io/" target="_blank" rel="noreferrer">OpenSea</a> marketplace.
+          Like every ERC-721 tokens, you can exchange them on the secondary market using the <a href={openSeaCollectionUrl} target="_blank" rel="noreferrer">OpenSea</a> marketplace.
           If you are connected to this website and if you have a DICK, you can find it by clicking on the My Dicks top menu link.
         </p>
       )} />
 
-      <TextSection title="where are stored CryptoDicks? How it works?" text={(
+      <TextSection title="where are stored SpaceDicks? How it works?" text={(
         <>
           <p>
-            When a new CryptoDicks token is minted, its unique traits are generated randomly and saved on the blockchain by the smart-contract.
+            When a new SpaceDicks token is minted, its unique traits are generated randomly and saved on the blockchain by the smart-contract.
             At the end of this on-chain process, an URL is generated.
           </p>
           <p>
@@ -68,16 +68,16 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
         </>
       )} />
 
-      <TextSection title="How can I see my CryptoDicks in my wallet?" text={(
+      <TextSection title="How can I see my SpaceDicks in my wallet?" text={(
         <>
           <p>
             To see your DICKS in the <a href="https://metamask.io/" target="_blank" rel="noreferrer">MetaMask</a> wallet, you have to import the token support once.
           </p>
-          <ol className="list-decimal pl-6">
+          <ol className="list-decimal leading-8 pl-6">
             <li>
-              Open MetaMask and check if you are on the good network (the dropdown menu at the top), here Polygon.
+              Open MetaMask and the Polygon network (the dropdown menu at the top).
             </li>
-            <li>{'Then click on the "Assets" tab, scroll down and click on "Import tokens" below "Don\'t see your token?"'}</li>
+            <li>{'Click on the "Assets" tab, scroll down and click on "Import tokens"'}</li>
             <li>
               Fill the form: 
               <br />
@@ -92,12 +92,11 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
       )} />
 
       <TextSection title="more?" text={(
-        <ol className="pl-6 list-disc">
-          <li> Read the code on <a href="https://github.com/juliencrn/CryptoDicks" target="_blank" rel="noreferrer">Github</a>. </li>
-          <li> Trade it on Opensea <a href={openSeaCollectionUrl} target="_blank" rel="noreferrer">Opensea</a></li>
-          <li> Chat on Twitter|discord|instagram|reddit (coming soon) </li>
-          <li> Inspect on Polygon scanner (coming soon) </li>
-  
+        <ol className="pl-6 leading-8 list-disc">
+          <li>Read the code on <a href={githubUrl} target="_blank" rel="noreferrer">Github</a>.</li>
+          <li>Trade it on Opensea <a href={openSeaCollectionUrl} target="_blank" rel="noreferrer">Opensea</a>.</li>
+          <li>Follow us on <a href={twitterUrl} target="_blank" rel="noreferrer">Twitter</a>.</li>
+          <li>Inspect on <a href={polygonScanUrl} target="_blank" rel="noreferrer">Polygon Scan</a>.</li>
         </ol>
       )} />
 

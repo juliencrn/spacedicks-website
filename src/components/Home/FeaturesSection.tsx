@@ -1,3 +1,4 @@
+import { githubUrl } from "../../config"
 import { CodeIcon, CollectionIcon, GlobeIcon, SettingIcon, StarIcon } from "../Icons"
 
 export const features = [
@@ -23,7 +24,7 @@ export const features = [
   },
   {
     title: "Open-source",
-    text: <p>You can read all the code from each piece of this project on <a href="https://github.com/juliencrn/CryptoDicks" target="_blank" rel="noreferrer">Github</a></p>,
+    text: <p>You can read all the code from each piece of this project on <a href={githubUrl} target="_blank" rel="noreferrer">Github</a></p>,
     icon: CodeIcon
   }
 ]

@@ -26,7 +26,7 @@ const GridSection = ({ disableMarginTop, disableMarginBottom, images }: PropType
           style={{ aspectRatio: "1/1", width: `calc(100%/8)` }} 
           className="relative"
         >
-          <img src={url} alt={"Random CryptoDicks"}  />
+          <Image src={url} alt={"Random SpaceDicks"} layout="fill" />
         </div>
       ))}
     </section>

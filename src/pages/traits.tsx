@@ -38,7 +38,7 @@ const Traits: NextPage<{ traits: ImagesByTrait[] }> = ({ traits }) => {
                 onClick={() => setSelected(option)}
               >
                 <div style={{ aspectRatio: "1/1", maxWidth: 300 }} className="relative m-auto w-full overflow-hidden rounded-lg">
-                  <img src={option.url} alt={trait.name + " - " + option.name} />
+                  <Image src={option.url} alt={trait.name + " - " + option.name} layout="fill" />
                 </div>
                 <span className="font-mono text-sm">
                   {option.name} ({option.rarity.toFixed(2) + "%"})
@@ -55,7 +55,7 @@ const Traits: NextPage<{ traits: ImagesByTrait[] }> = ({ traits }) => {
           open={modalOpen} 
           content={(
             <div style={{ aspectRatio: "1/1", maxWidth: 500 }} className="relative m-auto w-full overflow-hidden rounded-lg">
-              <img src={selected.url} alt={"CryptoDicks"} />
+              <Image src={selected.url} alt={"SpaceDicks"} layout="fill" />
             </div>
           )} 
           onClose={closeModal}
