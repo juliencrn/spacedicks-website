@@ -11,6 +11,6 @@ module.exports = {
   },
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'spacedicks.herokuapp.com', 'spacedicks.com']
+    domains: ['localhost', 'spacedicks.herokuapp.com', 'spacedicks.xyz']
   }
 }
