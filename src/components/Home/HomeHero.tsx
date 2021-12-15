@@ -18,7 +18,7 @@ function HomeHero({ title, description}: PropTypes) {
       <div className="w-full m-auto lg:flex">
         <div className="w-100 lg:w-1/2 flex py-6">
           <div style={{ aspectRatio: "1/1", maxWidth: 600 }} className={`${isDev ? "opacity-5" : ""} relative m-auto w-full rounded-2xl overflow-hidden`}>
-            <Image src={gif} alt={"SpaceDicks"} layout="fill" />
+            <Image priority src={gif} alt={"SpaceDicks"} layout="fill" />
           </div>
         </div>
         <div className="w-100 lg:w-1/2 lg:ml-6 mb-6 flex flex-col justify-center">
