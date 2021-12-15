@@ -1,6 +1,6 @@
 import { useWeb3React } from "@web3-react/core"
 import { InjectedConnector } from '@web3-react/injected-connector'
-import { useCallback, useEffect, useState } from "react"
+import { useCallback } from "react"
 import { useEffectOnce } from "usehooks-ts"
 import { AbiItem } from "web3-utils"
 
@@ -16,10 +16,7 @@ export const injected = new InjectedConnector({ supportedChainIds })
 
 function useWeb3() {
   const web3React = useWeb3React()
-  const [mintedId, setMintedId] = useState("")
-  const { active, account, library: web3, connector, activate, deactivate, chainId } = web3React
-
-  console.log(web3React);
+  const { active, account, library: web3, activate, deactivate } = web3React
 
   async function connect() {
     try {
@@ -59,50 +56,30 @@ function useWeb3() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active])
 
-  async function mint() {
+  async function mint(): Promise<number | null> {
     try {
       const contract = await getContract()
       if (!contract) {
         alert("Unable to mint, set your Metamask on the Polygon's network.")
-        return
+        return null
       }
-      await contract.methods.claim().send({
+      const tx = await contract.methods.claim().send({
         from: account,
         value: web3.utils.toWei('0.001', 'ether')
       })
+
+      return Number(tx?.events?.Transfer?.returnValues?.tokenId) || null
     } catch (error) {
       console.log(error)
+      return null
     }
   }
-
-  useEffect(() => {
-    (async () => {
-      if (active) {
-        const contract = await getContract()
-
-        if (contract) {
-          const zeroAddress = "0x0000000000000000000000000000000000000000"
-          const filter = { from: zeroAddress, to: account }
-          contract.events.Transfer({ filter })
-            .on("data", (tx: any) => {
-              if (tx?.type === "mined") {
-                setMintedId(tx?.returnValues.tokenId)
-              }
-            })
-            .on("error", console.log)
-        }
-      }
-    })()
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [active])
 
   return {
     ...web3React,
     connect,
     disconnect,
     mint,
-    mintedId,
     getContract
   }
 }

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useState } from 'react'
 
 import gif from "../../../dicks.gif"
 import { isDev, openSeaCollectionUrl, openSeaTokenBaseUrl } from '../../config'
@@ -11,7 +12,22 @@ interface PropTypes {
 }
 
 function HomeHero({ title, description}: PropTypes) {
-  const { active, connect, mint, mintedId } = useWeb3()
+  const { active, connect, mint } = useWeb3()
+  const [mintedId, setMintedId] = useState<undefined | number>(undefined)
+
+  const handleMint = async () => {
+    try {
+      const newTokenId = await mint()
+      if (newTokenId) {
+        setMintedId(newTokenId)
+      } else {
+        setMintedId(undefined)
+      }
+    } catch (error) {
+      console.log(error);
+      setMintedId(undefined)
+    }
+  }
 
   return (
     <header className="lg:min-h-screen lg:-mt-20 px-6 max-w-6xl mx-auto flex">
@@ -31,7 +47,7 @@ function HomeHero({ title, description}: PropTypes) {
 
           <div className="flex flex-wrap mt-6">
             {active 
-              ? <Button variant="primary" onClick={mint}>Mint your NFT</Button>
+              ? <Button variant="primary" onClick={handleMint}>Mint your NFT</Button>
               : <Button variant="primary" onClick={connect}>Connect wallet</Button>
             }
             
@@ -39,7 +55,7 @@ function HomeHero({ title, description}: PropTypes) {
               See on OpenSea
             </a>
           </div>
-          <MinedSuccessMessage tokenId={mintedId} />
+          <MinedSuccessMessage tokenId={mintedId ? mintedId.toString() : undefined} />
         </div>
       </div>
     </header>
