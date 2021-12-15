@@ -19,11 +19,9 @@ function useWeb3() {
   const [mintedId, setMintedId] = useState("")
   const { active, account, library: web3, connector, activate, deactivate, chainId } = web3React
 
+  console.log(web3React);
+
   async function connect() {
-    if (!chainId || !supportedChainIds.includes(chainId)) {
-      alert("Please connect to Polygon's network")
-      return
-    }
     try {
       await activate(injected)
     } catch (ex) {
