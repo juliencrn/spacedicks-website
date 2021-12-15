@@ -6,25 +6,24 @@ import { AbiItem } from "web3-utils"
 
 import SpaceDicks from '../contracts/SpaceDicks.json'
 
-export const injected = new InjectedConnector({
-  supportedChainIds: [
-    1, // Ethereum
-    3, // Eth testnet: Ropsten
-    4, // Eth testnet: Rinkeby
-    5, // Eth testnet: Gorli
-    42, // Eth testnet: Kovan
-    // 137, // Polygon 
-    1337, // Localhost ganache 
-    // 80001 // Polygon testnet: Mumbai
-  ],
-})
+const supportedChainIds = [
+  137, // Polygon 
+  1337, // Localhost ganache 
+  80001 // Polygon testnet: Mumbai
+]
+
+export const injected = new InjectedConnector({ supportedChainIds })
 
 function useWeb3() {
   const web3React = useWeb3React()
   const [mintedId, setMintedId] = useState("")
-  const { active, account, library: web3, connector, activate, deactivate } = web3React
+  const { active, account, library: web3, connector, activate, deactivate, chainId } = web3React
 
   async function connect() {
+    if (!chainId || !supportedChainIds.includes(chainId)) {
+      alert("Please connect to Polygon's network")
+      return
+    }
     try {
       await activate(injected)
     } catch (ex) {
@@ -50,6 +49,7 @@ function useWeb3() {
   })
 
   const getContract = useCallback(async () => {
+    if (!web3?.eth) return
     const networkId = await web3.eth.net.getId();
     const networkData = (SpaceDicks.networks as Record<string, { address: string }>)[networkId];
     return new web3.eth.Contract(
@@ -95,7 +95,8 @@ function useWeb3() {
     connect,
     disconnect,
     mint,
-    mintedId
+    mintedId,
+    getContract
   }
 }
 

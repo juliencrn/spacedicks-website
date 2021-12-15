@@ -9,7 +9,7 @@ export const features = [
   },
   {
     title: "Decentralized storage",
-    text: <p>Keep it immutable, immortal, unstoppable.</p>,
+    text: <p>Images are stored on IPFS to be immutable, immortal, unstoppable.</p>,
     icon: GlobeIcon
   },
   {
@@ -19,12 +19,12 @@ export const features = [
   },
   {
     title: "Vectorized images",
-    text: <p>Ensure high quality in all sizes.</p>,
+    text: <p>Ensure high quality in all sizes using SVG format.</p>,
     icon: StarIcon
   },
   {
     title: "Open-source",
-    text: <p>You can read all the code from each piece of this project on <a href={githubUrl} target="_blank" rel="noreferrer">Github</a></p>,
+    text: <p>Each piece of code of this project can be found on <a href={githubUrl} target="_blank" rel="noreferrer">Github</a>.</p>,
     icon: CodeIcon
   }
 ]

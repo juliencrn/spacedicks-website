@@ -24,6 +24,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-headroom": "^3.2.0",
+    "swr": "^1.1.1",
     "usehooks-ts": "^2.1.1",
     "web3": "^1.6.1",
     "web3-utils": "^1.6.1"

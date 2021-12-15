@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import gif from "../../../dicks.gif"
-import { openSeaCollectionUrl } from '../../config'
+import { isDev, openSeaCollectionUrl } from '../../config'
 import useWeb3 from '../../hooks/useWeb3'
 import Button from "../Button"
 
@@ -17,7 +17,7 @@ function HomeHero({ title, description}: PropTypes) {
     <header className="lg:min-h-screen lg:-mt-20 px-6 max-w-6xl mx-auto flex">
       <div className="w-full m-auto lg:flex">
         <div className="w-100 lg:w-1/2 flex py-6">
-          <div style={{ aspectRatio: "1/1", maxWidth: 600 }} className="relative m-auto w-full rounded-2xl overflow-hidden">
+          <div style={{ aspectRatio: "1/1", maxWidth: 600 }} className={`${isDev ? "opacity-5" : ""} relative m-auto w-full rounded-2xl overflow-hidden`}>
             <Image src={gif} alt={"SpaceDicks"} layout="fill" />
           </div>
         </div>
@@ -25,7 +25,7 @@ function HomeHero({ title, description}: PropTypes) {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-50 mt-10 sm:mt-0 mb-8 sm:mb-10">
             {title}
           </h1>
-          <p className="text-lg sm:text-2xl sm:leading-10 font-medium mb-6 	">
+          <p className="text-lg sm:text-2xl sm:leading-10 font-medium mb-6">
             {description}
           </p>
 

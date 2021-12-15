@@ -23,7 +23,7 @@ const GridSection = ({ disableMarginTop, disableMarginBottom, images }: PropType
       {images.map(url => (
         <div 
           key={url} 
-          style={{ aspectRatio: "1/1", width: `calc(100%/8)` }} 
+          style={{ aspectRatio: "1/1", width: `calc(100%/12)` }} 
           className="relative"
         >
           <Image src={url} alt={"Random SpaceDicks"} layout="fill" />

@@ -7,6 +7,7 @@ import HomeHero from '../components/Home/HomeHero'
 import GridSection from '../components/Home/GridSection'
 import TextSection from '../components/TextSection'
 import { contractAddress, description, githubUrl, openSeaCollectionUrl, polygonScanUrl, title, twitterUrl } from '../config'
+import LastMintedSection from '../components/Home/LastMintedSection'
 
 const Home: NextPage<{ images: string[][] }> = ({ images }) => {
   return (
@@ -20,7 +21,9 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
       </section>
 
       <GridSection images={images[0]} />
+
       <FeaturesSection />
+      
       <GridSection images={images[1]} />
       
       <TextSection 
@@ -33,6 +36,16 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
           </p>
         )}
       />
+
+      <TextSection title="why? / Story / Spirit" text={(
+        <>
+          <p>Love art, love crypto-world, love tech, love fun. You can mixt some hobbies.</p>
+          <p>Be unique and be part of a different communities, which of Doomer, Wokist, geek, unicorn, witch, space adventurer.</p>
+        </>
+      )}/>
+
+      <LastMintedSection />
+
       <TextSection title="how can I mint my SpaceDicks?" text={(
         <ol className="list-decimal leading-8 pl-6">
           <li>
@@ -78,7 +91,7 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
               Open MetaMask and the Polygon network (the dropdown menu at the top).
             </li>
             <li>{'Click on the "Assets" tab, scroll down and click on "Import tokens"'}</li>
-            <li>
+            <li className='break-words'>
               Fill the form: 
               <br />
               - Token Contract Address: {contractAddress}
@@ -100,12 +113,6 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
         </ol>
       )} />
 
-      <TextSection title="why? / Story / Spirit" text={(
-        <>
-          <p>Love art, love crypto-world, love tech, love fun. You can mixt some hobbies.</p>
-          <p>Be unique and be part of a different communities, which of Doomer, Wokist, geek, unicorn, witch, space adventurer.</p>
-        </>
-      )}/>
       <GridSection disableMarginBottom images={images[2]} />
     </>
   )
@@ -116,14 +123,16 @@ export default Home
 // Fetch images for API only on build
 // will be passed to the page component as props
 export async function getStaticProps(context: AppContext) {
-  const randomImages = getRandomImages(16 * 3)
+  const line = 12 // one line is 12 columns
+  const section = 3 * line // one section is 3 lines
+  const randomImages = getRandomImages(3 * section)
   return {
     props: {
       images: [
-        randomImages.slice(0, 16),
-        randomImages.slice(16, 32),
-        randomImages.slice(32, 48),
-      ]
+        randomImages.slice(0, section),
+        randomImages.slice(section, 2 * section),
+        randomImages.slice(2 * section, 3 * section),
+      ],
     }, 
   }
 }
