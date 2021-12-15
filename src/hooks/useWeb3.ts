@@ -49,9 +49,11 @@ function useWeb3() {
   })
 
   const getContract = useCallback(async () => {
-    if (!web3?.eth) return
     const networkId = await web3.eth.net.getId();
     const networkData = (SpaceDicks.networks as Record<string, { address: string }>)[networkId];
+    if (!networkData?.address) {
+      return null
+    }
     return new web3.eth.Contract(
       SpaceDicks.abi as AbiItem | AbiItem[],
       networkData.address
@@ -62,6 +64,10 @@ function useWeb3() {
   async function mint() {
     try {
       const contract = await getContract()
+      if (!contract) {
+        alert("Unable to mint, set your Metamask on the Polygon's network.")
+        return
+      }
       await contract.methods.claim().send({
         from: account,
         value: web3.utils.toWei('0.001', 'ether')
@@ -75,15 +81,18 @@ function useWeb3() {
     (async () => {
       if (active) {
         const contract = await getContract()
-        const zeroAddress = "0x0000000000000000000000000000000000000000"
-        const filter = { from: zeroAddress, to: account }
-        contract.events.Transfer({ filter })
-          .on("data", (tx: any) => {
-            if (tx?.type === "mined") {
-              setMintedId(tx?.returnValues.tokenId)
-            }
-          })
-          .on("error", console.log)
+
+        if (contract) {
+          const zeroAddress = "0x0000000000000000000000000000000000000000"
+          const filter = { from: zeroAddress, to: account }
+          contract.events.Transfer({ filter })
+            .on("data", (tx: any) => {
+              if (tx?.type === "mined") {
+                setMintedId(tx?.returnValues.tokenId)
+              }
+            })
+            .on("error", console.log)
+        }
       }
     })()
 

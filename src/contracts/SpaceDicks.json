@@ -32619,10 +32619,16 @@
       "links": {},
       "address": "0xbA4aE5F2eD7D3BDee64D4746dA76b68d57eBB6d8",
       "transactionHash": "0xe11057bc9d668fd0f4fa49cbc7800f5c3b180d7fd43a6e37d776ba2d255b21ec"
+    },
+    "80001": {
+      "events": {},
+      "links": {},
+      "address": "0xf043d437c4fbe1bDBB41D8EA984aB1216bb7C0Dd",
+      "transactionHash": "0xf12349e46adb0d81063229aeb3416c7044b9a7a8abc8abb45185d07eea8cb45f"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-14T00:27:26.510Z",
+  "updatedAt": "2021-12-15T02:47:18.741Z",
   "networkType": "ethereum",
   "devdoc": {
     "author": "juliencrn",
