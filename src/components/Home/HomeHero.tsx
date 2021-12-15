@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import gif from "../../../dicks.gif"
-import { isDev, openSeaCollectionUrl } from '../../config'
+import { isDev, openSeaCollectionUrl, openSeaTokenBaseUrl } from '../../config'
 import useWeb3 from '../../hooks/useWeb3'
 import Button from "../Button"
 
@@ -55,7 +55,13 @@ function MinedSuccessMessage({ tokenId }: { tokenId?: string }) {
   const fancyId = "#00000".slice(0, 6 - tokenId.length) + tokenId
   return (
     <span className="my-4">
-      {`SpaceDicks token ${fancyId} mined! 🎉`}
+      SpaceDicks token
+      <a href={openSeaTokenBaseUrl + tokenId} target="_blank" rel="noreferrer">
+        {' '}
+        {fancyId}
+        {' '}
+      </a>
+      mined! 🎉
     </span>
   )
 }

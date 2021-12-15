@@ -15,7 +15,11 @@ export const mediaQueries = {
   "2xl": "1536px",
 }
 
+export const NETWORK = process.env.NEXT_PUBLIC_NETWORK || "mumbai"
 export const openSeaCollectionUrl = process.env.NEXT_PUBLIC_OPENSEA_LINK
+export const openSeaTokenBaseUrl = NETWORK === "mainnet"
+  ? `https://opensea.io/assets/matic/${contractAddress}/`
+  : `https://testnets.opensea.io/assets/mumbai/${contractAddress}/`
 
 export const githubUrl = "https://github.com/juliencrn/spacedicks-contract"
 export const twitterUrl = "https://twitter.com/SpaceDicks_NFT"
