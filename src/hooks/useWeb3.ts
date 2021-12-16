@@ -65,7 +65,7 @@ function useWeb3() {
       }
       const tx = await contract.methods.claim().send({
         from: account,
-        value: web3.utils.toWei('0.001', 'ether')
+        value: web3.utils.toWei('0.01', 'ether')
       })
 
       return Number(tx?.events?.Transfer?.returnValues?.tokenId) || null
