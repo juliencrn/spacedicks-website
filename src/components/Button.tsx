@@ -3,9 +3,11 @@ import { AnchorHTMLAttributes, ButtonHTMLAttributes, forwardRef } from "react"
 
 interface StyleProps {
   variant: "primary" | "secondary"
+  disabled?: boolean
 }
 
 const getClassnames = (props: StyleProps) => {
+    const disabled = !!props?.disabled
   let classNames = cn(
     "w-full sm:w-auto flex-none py-3 px-6",
     "font-mono font-medium leading-6 text-center",
@@ -14,12 +16,17 @@ const getClassnames = (props: StyleProps) => {
     "space-x-2 sm:space-x-4",
     "transition-colors duration-200",
     "focus:outline-none",
+    disabled ? "cursor-not-allowed" : "cursor-pointer"
   )
 
-  if (props.variant === "primary") {
-      classNames = cn(classNames, "bg-purple-400  hover:bg-purple-300")
+  if (disabled) {
+    classNames = cn(classNames, "bg-gray-500  hover:bg-gray-500")
   } else {
-      classNames = cn(classNames, "bg-green-300 hover:bg-green-200")
+    if (props.variant === "primary") {
+        classNames = cn(classNames, "bg-purple-400  hover:bg-purple-300")
+    } else {
+        classNames = cn(classNames, "bg-green-300 hover:bg-green-200")
+    }
   }
 
   return classNames

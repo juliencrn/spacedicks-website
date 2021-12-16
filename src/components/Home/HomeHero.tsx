@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import cn from 'classnames'
+import useSWR from 'swr'
 
 import gif from "../../../dicks.gif"
-import { isDev, openSeaCollectionUrl, openSeaTokenBaseUrl } from '../../config'
+import { API_URL, isDev, openSeaCollectionUrl, openSeaTokenBaseUrl } from '../../config'
 import useWeb3 from '../../hooks/useWeb3'
 import Button from "../Button"
 import { mainTitle } from '../Titles'
+
+const fetcher = (path: string) => fetch(API_URL + path).then(res => res.json())
 
 interface PropTypes {
     title: string
@@ -14,10 +17,13 @@ interface PropTypes {
 }
 
 function HomeHero({ title, description}: PropTypes) {
+  const { data: supply } = useSWR<number>("/supply", fetcher)
   const { active, connect, mint } = useWeb3()
+  const [isMinting, setIsMinting] = useState<boolean>(false)
   const [mintedId, setMintedId] = useState<undefined | number>(undefined)
 
   const handleMint = async () => {
+    setIsMinting(true)
     try {
       const newTokenId = await mint()
       if (newTokenId) {
@@ -25,9 +31,11 @@ function HomeHero({ title, description}: PropTypes) {
       } else {
         setMintedId(undefined)
       }
+      setIsMinting(false)
     } catch (error) {
       console.log(error);
       setMintedId(undefined)
+      setIsMinting(false)
     }
   }
 
@@ -49,8 +57,25 @@ function HomeHero({ title, description}: PropTypes) {
 
           <div className="flex flex-wrap">
             {active 
-              ? <Button variant="primary" onClick={handleMint}>Mint your NFT</Button>
-              : <Button variant="primary" onClick={connect}>Connect wallet</Button>
+              // case: logged in
+              ? (isMinting 
+                ? (
+                  <Button variant="primary" disabled>
+                    DICK is growing...
+                  </Button>
+                ) : (supply && supply >= 10_000 
+                  ? (
+                    <Button variant="primary" disabled>
+                      SOLD OUT
+                    </Button>
+                  ) : (
+                    <Button variant="primary" onClick={handleMint}>
+                      Mint your NFT
+                    </Button>
+                  )
+                ))
+              // case: logged out
+              : <Button variant="primary" onClick={connect}>Mint your NFT</Button>
             }
             
             <a href={openSeaCollectionUrl} target="_blank" className="sm:ml-6 mt-6 sm:my-auto font-mono" rel="noreferrer">
