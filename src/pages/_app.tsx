@@ -1,6 +1,7 @@
 import '../styles/global.css'
 
 import Head from 'next/head'
+import Script from 'next/script'
 import type { AppProps } from 'next/app'
 import { Web3ReactProvider } from '@web3-react/core'
 import Web3 from 'web3'
@@ -27,6 +28,17 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </Layout>
       </Web3ReactProvider>
+
+      <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-B6SYN1Z959');
+        `}
+      </Script>
     </>
   )
 }
