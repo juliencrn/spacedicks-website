@@ -2,7 +2,7 @@ import { FC } from 'react'
 import cn from 'classnames'
 
 import NavigationBar from './NavigationBar'
-import { secondaryTitle } from '../Titles'
+import { sectionSubtitle } from '../Titles'
 
 const Layout: FC =({ children }) => {
   return (
@@ -19,8 +19,11 @@ export default Layout
 function Footer() {
   return (
     <footer className="my-16 md:my-24">
-      <p className={cn(secondaryTitle, "text-center")}>
-        Let your quirkiness shine
+      <p className={cn(sectionSubtitle, "text-center")}>
+        ready to reenchanting the world?
+      </p>
+      <p className={cn(sectionSubtitle, "text-center")}>
+        let your quirkiness shine
       </p>
     </footer>
   )

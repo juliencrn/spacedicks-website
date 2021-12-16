@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import { AppContext } from 'next/app'
+import cn from 'classnames'
 
 import { getRandomImages } from '../api/getRandomImages'
 import FeaturesSection from '../components/Home/FeaturesSection'
@@ -8,6 +9,7 @@ import GridSection from '../components/Home/GridSection'
 import TextSection from '../components/Home/TextSection'
 import { contractAddress, description, githubUrl, openSeaCollectionUrl, polygonScanUrl, title, twitterUrl } from '../config'
 import LastMintedSection from '../components/Home/LastMintedSection'
+import { sectionSubtitle } from '../components/Titles'
 
 const Home: NextPage<{ images: string[][] }> = ({ images }) => {
   return (
@@ -15,10 +17,10 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
       <HomeHero title={title} description={description} />
       
       <section className="max-w-5xl mx-auto my-10 sm:my-20 md:mb-24 lg:mt-0 px-6">
-        <p className="text-lg sm:text-2xl sm:leading-10 font-extrabold tracking-tight mb-6 text-center text-gray-50">
-          {`The world of art, the crypto world, a beer with friends, a misunderstanding, 
+        <p className={cn(sectionSubtitle, "text-center")}>
+          The world of art, the crypto world, a beer with friends, a misunderstanding, 
           phallocracy, feminism, geeks and rainbows, you can buy a banana taped to a wall or a DICK, 
-          because, why not? "life is a conundrum of esoterica"`}
+          because, why not? « life is a conundrum of esoterica. »
         </p>
       </section>
 
@@ -36,9 +38,25 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
         </p>
       </TextSection> 
 
-      <TextSection title="why? / Story / Spirit">
-        <p>Love art, love crypto-world, love tech, love fun. You can mixt some hobbies.</p>
-        <p>Be unique and be part of a different communities, which of Doomer, Wokist, geek, unicorn, witch, space adventurer.</p>
+      <TextSection title="for whom?">
+        <p>
+          Do you like art? Does cryptomania thrill you? You wouldn&apos;t say no to making a little money? 
+          You want to get in the wave? 
+          Space Dicks is the answer to doomers, nerds, wokists, unicorns, witches, geeks, space adventurers, 
+          cyberpunks, cursed poets and all the weirdos of the world. Here your oddity is valued.
+          Your friends and family probably think that NFTs are just digital images, that this investment has no basis. 
+          But geniuses are not immediately understood. Do you believe in it? Then it has value. 
+          Don&apos;t forget that « The human has always needed to confront things that are beyond him. »</p>
+      </TextSection>
+
+      <TextSection title="why?">
+        <p>
+          This underground technology is the internet of tomorrow, and maybe the future of art and culture. 
+          Thanks to the blockchain we will reshape the economy so that it serves us, and not the other way around. 
+          We&apos;re going to undo censorship, borders and discrimination, protect our privacy, 
+          decentralize power and hack the world, in a fun and cool way of course, sexycool is our signature.
+        </p>
+        <p></p>
       </TextSection>
 
       <LastMintedSection />
@@ -50,7 +68,7 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
             <br />
             This will allow websites (that you authorize) access to your crypto account.
           </li>
-          <li>Then, refresh the page and click on the &quot;connect&quot; button</li>
+          <li>Then, refresh the page and click on the « connect » button</li>
           <li>
             Once logged in, you can mint your own SpaceDicks token and enter the blockchain for life! 
             The 1000 first will be given for free then it will cost you 0.01 ether and some network fee.
@@ -63,7 +81,6 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
         <p>
           Like every ERC-721 tokens, you can exchange them on the secondary market using the <a href={openSeaCollectionUrl} target="_blank" rel="noreferrer">OpenSea</a> marketplace.
           There you can sell it for a fixed price or even at auction.
-          {/* If you are connected to this website and if you have a DICK, you can find it by clicking on the My Dicks top menu link. */}
         </p>
       </TextSection>
 
