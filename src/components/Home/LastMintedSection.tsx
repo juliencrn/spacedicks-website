@@ -1,10 +1,12 @@
-import useSWR from 'swr'
+import { useState } from 'react';
 import Image from "next/image"
+import useSWR from 'swr'
+import { useUpdateEffect } from 'usehooks-ts';
+import cn from 'classnames'
 
 import { API_URL } from '../../config';
 import Modal, { useModal } from '../Modal';
-import { useState } from 'react';
-import { useUpdateEffect } from 'usehooks-ts';
+import { sectionTitle } from '../Titles';
 
 const fetcher = (path: string) => fetch(API_URL + path).then(res => res.json())
 
@@ -34,7 +36,7 @@ function LastMintedSection() {
 
     return (
       <section className="max-w-4xl mx-auto my-8 sm:my-12 md:my-16 px-6">
-        <h2 className="text-xl sm:text-3xl my-6 font-extrabold tracking-tight text-gray-50">
+        <h2 className={cn(sectionTitle, "my-4")}>
           last minted dicks
         </h2>
 
@@ -45,8 +47,8 @@ function LastMintedSection() {
                 <Image src={API_URL + "/svg" + item.path} alt={`SpaceDicks #${item.id}`} layout="fill" />
               </div>
               <span className="font-mono text-sm">
-                  SpaceDicks #{item.id} 
-                </span>
+                SpaceDicks #{item.id} 
+              </span>
             </li>
           ))}
         </ul>

@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import { useRef, useState } from 'react'
 import Headroom from 'react-headroom'
+import cn from 'classnames'
 import { useEventListener, useMediaQuery, useOnClickOutside } from 'usehooks-ts'
 
 import { title, mediaQueries } from '../../config'
 import { BurgerIcon } from '../Icons'
+import { sectionSubtitle } from '../Titles'
 import ConnectButton from './ConnectButton'
 
 const NavigationBar =() => {
@@ -27,7 +29,7 @@ const NavigationBar =() => {
       <div ref={menuRef} className={`${showMobileMenu ? "flex-wrap" : ""} w-full max-w-7xl mx-auto flex justify-between px-6 relative`}>
         <div className="h-20 flex">
           <Link href="/">
-            <a className="my-auto text-md sm:text-xl font-extrabold tracking-tight text-gray-50">
+            <a className={cn(sectionSubtitle, "my-auto")}>
               {title}
             </a>
           </Link>

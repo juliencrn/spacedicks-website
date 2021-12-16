@@ -4,10 +4,12 @@ import { AppContext } from 'next/app'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useUpdateEffect } from 'usehooks-ts'
+import cn from 'classnames'
 
 import { getImagesByTraits, ImagesByTrait, TraitOption } from '../api/getImagesByTraits'
 import Modal, { useModal } from '../components/Modal'
 import { API_URL } from '../config'
+import { sectionTitle } from '../components/Titles'
 
 const Traits: NextPage<{ traits: ImagesByTrait[] }> = ({ traits }) => {
   const [modalOpen, {openModal, closeModal}] = useModal()
@@ -25,7 +27,7 @@ const Traits: NextPage<{ traits: ImagesByTrait[] }> = ({ traits }) => {
     <>
       {traits.map((trait) => (
         <section key={trait.name} className="px-6 max-w-7xl mx-auto my-8 sm:my-12 md:my-16">
-          <h2 className="text-3xl sm:text-4xl mb-6 font-extrabold tracking-tight text-gray-50">
+          <h2 className={cn(sectionTitle, "my-4")}>
             {trait.name}
           </h2>
 

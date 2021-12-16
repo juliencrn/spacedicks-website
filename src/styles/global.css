@@ -17,7 +17,3 @@ a {
 *::-webkit-scrollbar {
   display: none;
 }
-
-p {
-  @apply leading-8;
-}

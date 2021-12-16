@@ -1,5 +1,8 @@
+import cn from 'classnames'
+
 import { githubUrl } from "../../config"
 import { CodeIcon, CollectionIcon, GlobeIcon, SettingIcon, StarIcon } from "../Icons"
+import { sectionSubtitle } from '../Titles'
 
 export const features = [
   {
@@ -14,7 +17,7 @@ export const features = [
   },
   {
     title: "Rarity algorithm",
-    text: <p>Each dick is unique and each attribute as a rarity level.</p>,
+    text: <p>Each dick is unique and each attribute has a rarity level.</p>,
     icon: SettingIcon
   },
   {
@@ -39,12 +42,10 @@ const FeaturesSection = () => {
               {feature.icon()}
             </div>
             <div className="flex-1 flex flex-col align-middle justify-start ml-6">
-              <h3 className="text-xl sm:text-2xl leading-none sm:leading-none font-extrabold tracking-tight text-gray-50 mb-2">
+              <h3 className={cn(sectionSubtitle, "mb-1")}>
                 {feature.title}
               </h3>
-              <div className="text-md sm:text-lg">
-              {feature.text}
-              </div>
+              <div>{feature.text}</div>
             </div>
           </li>
         ))}

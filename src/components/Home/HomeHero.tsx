@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import { useState } from 'react'
+import cn from 'classnames'
 
 import gif from "../../../dicks.gif"
 import { isDev, openSeaCollectionUrl, openSeaTokenBaseUrl } from '../../config'
 import useWeb3 from '../../hooks/useWeb3'
 import Button from "../Button"
+import { mainTitle } from '../Titles'
 
 interface PropTypes {
     title: string
@@ -33,25 +35,25 @@ function HomeHero({ title, description}: PropTypes) {
     <header className="lg:min-h-screen lg:-mt-20 px-6 max-w-6xl mx-auto flex">
       <div className="w-full m-auto lg:flex">
         <div className="w-100 lg:w-1/2 flex py-6">
-          <div style={{ aspectRatio: "1/1", maxWidth: 600 }} className={`${isDev ? "opacity-5" : ""} relative m-auto w-full rounded-2xl overflow-hidden`}>
+          <div style={{ aspectRatio: "1/1", maxWidth: 540 }} className={`${isDev ? "opacity-5" : ""} relative w-full rounded-2xl overflow-hidden`}>
             <Image priority src={gif} alt={"SpaceDicks"} layout="fill" />
           </div>
         </div>
         <div className="w-100 lg:w-1/2 lg:ml-6 mb-6 flex flex-col justify-center">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-50 mt-10 sm:mt-0 mb-8 sm:mb-10">
+          <h1 className={cn(mainTitle, "mt-10 lg:mt-0 mb-6 sm:mb-10")}>
             {title}
           </h1>
           <p className="text-lg sm:text-2xl sm:leading-10 font-medium mb-6">
             {description}
           </p>
 
-          <div className="flex flex-wrap mt-6">
+          <div className="flex flex-wrap">
             {active 
               ? <Button variant="primary" onClick={handleMint}>Mint your NFT</Button>
               : <Button variant="primary" onClick={connect}>Connect wallet</Button>
             }
             
-            <a href={openSeaCollectionUrl} target="_blank" className="sm:ml-6 font-mono my-auto" rel="noreferrer">
+            <a href={openSeaCollectionUrl} target="_blank" className="sm:ml-6 mt-6 sm:my-auto font-mono" rel="noreferrer">
               See on OpenSea
             </a>
           </div>
