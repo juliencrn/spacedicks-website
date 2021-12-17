@@ -3,11 +3,12 @@ import { useState } from 'react'
 import cn from 'classnames'
 import useSWR from 'swr'
 
-import gif from "../../../dicks.gif"
+import gif from "../../assets/dicks.gif"
 import { API_URL, isDev, openSeaCollectionUrl, openSeaTokenBaseUrl } from '../../config'
 import useWeb3 from '../../hooks/useWeb3'
 import Button from "../Button"
 import { mainTitle } from '../Titles'
+import { FireIcon } from '../Icons'
 
 const fetcher = (path: string) => fetch(API_URL + path).then(res => res.json())
 
@@ -40,9 +41,9 @@ function HomeHero({ title, description}: PropTypes) {
   }
 
   return (
-    <header className="lg:min-h-screen lg:-mt-20 px-6 max-w-6xl mx-auto flex">
+    <header className="lg:min-h-screen lg:-mt-20 px-6 max-w-6xl mx-auto flex flex-wrap">
       <div className="w-full m-auto lg:flex">
-        <div className="w-100 lg:w-1/2 flex py-6">
+        <div className="w-100 lg:w-1/2 flex my-6">
           <div style={{ aspectRatio: "1/1", maxWidth: 540 }} className={`${isDev ? "opacity-5" : ""} relative w-full rounded-2xl overflow-hidden`}>
             <Image priority src={gif} alt={"SpaceDicks"} layout="fill" />
           </div>
@@ -54,6 +55,15 @@ function HomeHero({ title, description}: PropTypes) {
           <p className="text-lg sm:text-2xl sm:leading-10 font-medium mb-6">
             {description}
           </p>
+
+          {supply && supply < 1100 && (
+            <div className='flex my-3 text-gray-50'>
+              <h6 className="my-auto mr-1 text-sm font-medium">
+                <code className='font-mono'>{1100 - supply}</code> free DICKs left on pre-sale
+              </h6>
+              <FireIcon />
+            </div>
+          )}
 
           <div className="flex flex-wrap">
             {active 

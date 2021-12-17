@@ -45,18 +45,17 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
           Space Dicks is the answer to doomers, nerds, wokists, unicorns, witches, geeks, space adventurers, 
           cyberpunks, cursed poets and all the weirdos of the world. Here your oddity is valued.
           Your friends and family probably think that NFTs are just digital images, that this investment has no basis. 
-          But geniuses are not immediately understood. Do you believe in it? Then it has value. 
+          But geniuses are never immediately understood. Do you believe in it? Then it has value. 
           Don&apos;t forget that « The human has always needed to confront things that are beyond him. »</p>
       </TextSection>
 
       <TextSection title="why?">
         <p>
-          This underground technology is the internet of tomorrow, and maybe the future of art and culture. 
+          This underground technology is the internet of tomorrow, and maybe even, the future of art and culture. 
           Thanks to the blockchain we will reshape the economy so that it serves us, and not the other way around. 
           We&apos;re going to undo censorship, borders and discrimination, protect our privacy, 
           decentralize power and hack the world, in a fun and cool way of course, sexycool is our signature.
         </p>
-        <p></p>
       </TextSection>
 
       <LastMintedSection />
@@ -69,9 +68,11 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
             This will allow websites (that you authorize) access to your crypto account.
           </li>
           <li>Then, refresh the page and click on the « connect » button</li>
+          <li>To pay the gas fees, you need have some MATIC in your wallet, you can buy it with your CB using <a href="https://www.moonpay.com/buy/matic" target="_blank" rel="noreferrer">moonpay</a>.</li>
           <li>
             Once logged in, you can mint your own SpaceDicks token and enter the blockchain for life! 
-            The 1000 first will be given for free then it will cost you 0.01 ether and some network fee.
+            <br />
+            The 1000 first will be given for free then it will cost you 25 MATIC (≈$50) and some network fee.
           </li>
           <li>Finally, you can see your DICK in your wallet or in the <a href={openSeaCollectionUrl} target="_blank" rel="noreferrer">OpenSea</a> NFT marketplace.</li>
         </ol>
@@ -79,8 +80,9 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
 
       <TextSection title="how I can buy/sell SpaceDicks?">
         <p>
-          Like every ERC-721 tokens, you can exchange them on the secondary market using the <a href={openSeaCollectionUrl} target="_blank" rel="noreferrer">OpenSea</a> marketplace.
-          There you can sell it for a fixed price or even at auction.
+          Like every ERC-721 tokens, you can exchange them on the secondary market.
+          On the <a href={openSeaCollectionUrl} target="_blank" rel="noreferrer">OpenSea</a> marketplace,
+          you can sell it for a fixed price or even at auction.
         </p>
       </TextSection>
 
