@@ -63,10 +63,21 @@ function useWeb3() {
         alert("Unable to mint, set your Metamask on the Polygon's network.")
         return null
       }
-      const tx = await contract.methods.claim().send({
-        from: account,
-        value: web3.utils.toWei('0.01', 'ether')
-      })
+
+      // Add the amount of fees only if they are paid
+      const owner = await contract.methods.owner().call()
+      const isOwner = owner === account
+      const supply = await contract.methods.currentSupply().call()
+      const preSalesLimit = await contract.methods.preSalesLimit().call()
+      const isInPreSales = Number(supply) < Number(preSalesLimit)
+      const txOptions = { from: account, value: 0 }
+
+      if (!isOwner && !isInPreSales) {
+        const claimFee = await contract.methods.claimFee().call()
+        txOptions.value = claimFee
+      }
+
+      const tx = await contract.methods.claim().send(txOptions)
 
       return Number(tx?.events?.Transfer?.returnValues?.tokenId) || null
     } catch (error) {
