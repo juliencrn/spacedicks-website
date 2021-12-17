@@ -7,7 +7,8 @@ import { Web3ReactProvider } from '@web3-react/core'
 import Web3 from 'web3'
 
 import Layout from '../components/Layout/Layout'
-import { description, title } from '../config'
+import { description, title, twitterName } from '../config'
+import image from '../assets/cover.png'
 
 function getLibrary(provider?: any) {
   return new Web3(provider)
@@ -17,9 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description.slice(0, 140) + "..."} />
-        <FontLinks />
+        <SEO />
         <FaviconMeta />
       </Head>
 
@@ -45,12 +44,24 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 export default MyApp
 
-const FontLinks = () => (
+const SEO = () => (
   <>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-    {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    {/* <!-- Twitter Card data --> */}
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content={title}/>
+    <meta name="twitter:description" content={description}/>
+    <meta name="twitter:creator" content={`@${twitterName}`}/>
+    <meta name="twitter:image:src" content={image.src}/>
+
+    {/* <!-- Open Graph data --> */}
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="site" />
+    <meta property="og:url" content="https://spacedicks.xyz" />
+    <meta property="og:image" content={image.src} />
+    <meta property="og:description" content={description} />
   </>
 )
 

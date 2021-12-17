@@ -22,5 +22,6 @@ export const openSeaTokenBaseUrl = NETWORK === "mainnet"
   : `https://testnets.opensea.io/assets/mumbai/${contractAddress}/`
 
 export const githubUrl = "https://github.com/juliencrn/spacedicks-contract"
-export const twitterUrl = "https://twitter.com/SpaceDicks_NFT"
+export const twitterName = "SpaceDicks_NFT"
+export const twitterUrl = `https://twitter.com/${twitterName}`
 export const polygonScanUrl = `https://polygonscan.com/token/${contractAddress}` // mumbai.polygonscan.com for testnet
