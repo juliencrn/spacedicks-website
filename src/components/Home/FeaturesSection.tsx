@@ -7,7 +7,7 @@ import { sectionSubtitle } from '../Titles'
 export const features = [
   {
     title: "Full on-chain metadata",
-    text: <p>Avoid power cheating, your can verify dicks attributes by yourself.</p>,
+    text: <p>Avoid power cheating, you can verify dicks attributes by yourself.</p>,
     icon: CollectionIcon
   },
   {

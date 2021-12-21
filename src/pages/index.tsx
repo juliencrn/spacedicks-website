@@ -17,7 +17,7 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
       <HomeHero title={title} description={description} />
       
       <section className="max-w-5xl mx-auto my-10 sm:my-20 md:mb-24 lg:mt-0 px-6">
-        <p className={cn(sectionSubtitle, "text-center")}>
+        <p className={cn(sectionSubtitle.replace("leading-none", ""), "text-center")}>
           The world of art, the crypto world, a beer with friends, a misunderstanding, 
           phallocracy, feminism, geeks and rainbows, you can buy a banana taped to a wall or a DICK, 
           because, why not? « life is a conundrum of esoterica. »
@@ -38,15 +38,16 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
         </p>
       </TextSection> 
 
-      <TextSection title="for whom?">
+      <TextSection title="who needs a SpaceDicks in their life?">
         <p>
           Do you like art? Does cryptomania thrill you? You wouldn&apos;t say no to making a little money? 
           You want to get in the wave? 
-          Space Dicks is the answer to doomers, nerds, wokists, unicorns, witches, geeks, space adventurers, 
+          SpaceDicks is for you who are doomers, nerds, wokists, unicorns, witches, geeks, space adventurers, 
           cyberpunks, cursed poets and all the weirdos of the world. Here your oddity is valued.
           Your friends and family probably think that NFTs are just digital images, that this investment has no basis. 
           But geniuses are never immediately understood. Do you believe in it? Then it has value. 
-          Don&apos;t forget that « The human has always needed to confront things that are beyond him. »</p>
+          Don&apos;t forget that « The human has always needed to confront things that are beyond him. »
+        </p>
       </TextSection>
 
       <TextSection title="why?">
