@@ -21,12 +21,10 @@ const GridSection = ({ disableMarginTop, disableMarginBottom, images }: PropType
   return (
     <section className={cn("flex flex-wrap", margin)}>
       {images.map(url => (
-        <div 
-          key={url} 
-          style={{ aspectRatio: "1/1", width: `calc(100%/12)` }} 
-          className="relative"
-        >
-          <Image src={url} alt={"Random SpaceDicks"} layout="fill" />
+        <div key={url} style={{ width: `calc(100%/12)` }} className='relative'>
+          <div className='square'>
+            <Image src={url} alt={"Random SpaceDicks"} layout="fill" />
+          </div>
         </div>
       ))}
     </section>
