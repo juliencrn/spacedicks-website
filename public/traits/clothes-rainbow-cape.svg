@@ -1,0 +1,21 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>clothe 2</title>	
+			<defs><linearGradient id="blue-to-blue-45" x1="1.015" y1="-0.888" x2="-0.045" y2="1.333" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#6f73d2"/>
+			<stop offset="1" stop-color="#83c9f4"/>
+		</linearGradient><linearGradient id="rainbow-vertical" x1="1" y1="0.008" x2="0.014" y2="0.979" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#ffc6ff"/>
+			<stop offset="0.148" stop-color="#bdb2ff"/>
+			<stop offset="0.276" stop-color="#a0c4ff"/>
+			<stop offset="0.435" stop-color="#9bf6ff"/>
+			<stop offset="0.567" stop-color="#caffbf"/>
+			<stop offset="0.685" stop-color="#fdffb6"/>
+			<stop offset="0.857" stop-color="#ffd6a5"/>
+			<stop offset="1" stop-color="#ffadad"/>
+		</linearGradient></defs>
+			<rect width="96" height="96" fill="#ffc6ff"/><path id="rainbow-cape" d="M206.511,148.726l-19.329,29.2,10.6,2.564h31.268l9.353-2.564-16.91-29.2Z" transform="translate(-166 -114)" fill="url(#rainbow-vertical)"/><g id="dick" transform="translate(96 98) rotate(180)">
+      <rect width="15" height="51.915" rx="7.5" transform="translate(40.5 22)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(31 18)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(46 18)" fill="url(#blue-to-blue-45)"/>
+    </g>
+		</svg>

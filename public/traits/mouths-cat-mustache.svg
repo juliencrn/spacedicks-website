@@ -1,0 +1,19 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>mouth 2</title>	
+			<defs><linearGradient id="blue-to-blue-45" x1="1.015" y1="-0.888" x2="-0.045" y2="1.333" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#6f73d2"/>
+			<stop offset="1" stop-color="#83c9f4"/>
+		</linearGradient></defs>
+			<rect width="96" height="96" fill="#ffc6ff"/><g id="dick" transform="translate(96 98) rotate(180)">
+      <rect width="15" height="51.915" rx="7.5" transform="translate(40.5 22)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(31 18)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(46 18)" fill="url(#blue-to-blue-45)"/>
+    </g><g id="cat-mustache" transform="translate(1 5)">
+			<path d="M.006,5.488A5.778,5.778,0,0,1,1.587.914,2.759,2.759,0,0,1,4.3.073" transform="translate(36.745 33.207) rotate(-88)" fill="none" stroke="#5fdd9d" stroke-linecap="round" stroke-width="0.5"/>
+			<path d="M.006,5.488A5.778,5.778,0,0,1,1.587.914,2.759,2.759,0,0,1,4.3.073" transform="translate(37.745 31.207) rotate(-88)" fill="none" stroke="#5fdd9d" stroke-linecap="round" stroke-width="0.5"/>
+			<path d="M.006,0a5.778,5.778,0,0,0,1.58,4.574,2.759,2.759,0,0,0,2.71.841" transform="translate(53.818 33.304) rotate(-90)" fill="none" stroke="#5fdd9d" stroke-linecap="round" stroke-width="0.5"/>
+			<path d="M.006,0a5.778,5.778,0,0,0,1.58,4.574,2.759,2.759,0,0,0,2.71.841" transform="translate(51.085 32.916) rotate(-48)" fill="none" stroke="#5fdd9d" stroke-linecap="round" stroke-width="0.5"/>
+			<path d="M.006,5.488A5.778,5.778,0,0,1,1.587.914,2.759,2.759,0,0,1,4.3.073" transform="matrix(-0.695, -0.719, 0.719, -0.695, 41.08, 36.607)" fill="none" stroke="#5fdd9d" stroke-linecap="round" stroke-width="0.5"/>
+			<path d="M.006,0a5.778,5.778,0,0,0,1.58,4.574,2.759,2.759,0,0,0,2.71.841" transform="translate(52.818 31.304) rotate(-90)" fill="none" stroke="#5fdd9d" stroke-linecap="round" stroke-width="0.5"/>
+		</g>
+		</svg>

@@ -1,0 +1,16 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>hat 8</title>	
+			<defs><linearGradient id="blue-to-blue-45" x1="1.015" y1="-0.888" x2="-0.045" y2="1.333" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#6f73d2"/>
+			<stop offset="1" stop-color="#83c9f4"/>
+		</linearGradient><linearGradient id="green-pink-purple-45" x1="0.024" y1="0.045" x2="0.98" y2="0.976" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#68fced"/>
+			<stop offset="0.474" stop-color="#eeb7fe"/>
+			<stop offset="1" stop-color="#9c65fa"/>
+		</linearGradient></defs>
+			<rect width="96" height="96" fill="#ffc6ff"/><path id="cute-hair-below" transform="translate(-708 -139)" d="M755.155,162.085s-2.682-1.109-5.383,2.327-3.174,16.9-3.174,16.9l20.83,2.384,7.779,1.718,3.227-1.718-11.006-2.384-4.12-8.508-2.481-5.541Z" fill="url(#green-pink-purple-45)"/><g id="dick" transform="translate(96 98) rotate(180)">
+      <rect width="15" height="51.915" rx="7.5" transform="translate(40.5 22)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(31 18)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(46 18)" fill="url(#blue-to-blue-45)"/>
+    </g><path id="cute-hair" transform="translate(-708 -138)" d="M756,162.085c-.159,1.351,1.1,4.9,4.149,5.081s4.534,15.231,8.744,14.522,7.99,2.723,9.936,1.289-9.936-17.357-9.936-17.357l-6.613-4.246S756.159,160.734,756,162.085Z" fill="url(#green-pink-purple-45)"/>
+		</svg>

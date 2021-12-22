@@ -1,0 +1,9 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>background 14</title>	
+			<defs><linearGradient id="shades-of-grey-vertical" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#0f0c29"/>
+			<stop offset="0.488" stop-color="#302b63"/>
+			<stop offset="1" stop-color="#24242e"/>
+		</linearGradient></defs>
+			<rect width="96" height="96" fill="url(#shades-of-grey-vertical)"/>
+		</svg>

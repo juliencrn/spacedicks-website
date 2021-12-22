@@ -1,0 +1,17 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>hat 4</title>	
+			<defs><linearGradient id="blue-to-blue-45" x1="1.015" y1="-0.888" x2="-0.045" y2="1.333" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#6f73d2"/>
+			<stop offset="1" stop-color="#83c9f4"/>
+		</linearGradient></defs>
+			<rect width="96" height="96" fill="#ffc6ff"/><g id="dick" transform="translate(96 98) rotate(180)">
+      <rect width="15" height="51.915" rx="7.5" transform="translate(40.5 22)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(31 18)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(46 18)" fill="url(#blue-to-blue-45)"/>
+    </g><g id="monster-ears">
+			<path d="M765.923,385.147l-1.453-4.612,4.448,2.243Z" transform="translate(-724 -358)" fill="url(#blue-to-blue-45)"/>
+			<path d="M765.923,385.147l-1.453-4.612,4.448,2.243Z" transform="matrix(0.259, 0.966, -0.966, 0.259, 224.634, -814.815)" fill="url(#blue-to-blue-45)"/>
+			<path d="M765.446,383.847l-.976-3.312,2.988,1.611Z" transform="translate(-723 -356.961)" fill="#5ebabe"/>
+			<path d="M765.474,383.812l-1-3.277,3.073,1.594Z" transform="matrix(0.259, 0.966, -0.966, 0.259, 223.89, -813.58)" fill="#5ebabe"/>
+		</g>
+		</svg>

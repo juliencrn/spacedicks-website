@@ -1,17 +1,20 @@
 import type { NextPage } from 'next'
-import { AppContext } from 'next/app'
+// import { AppContext } from 'next/app'
+import Image from 'next/image'
 import cn from 'classnames'
 
-import { getRandomImages } from '../api/getRandomImages'
 import FeaturesSection from '../components/Home/FeaturesSection'
 import HomeHero from '../components/Home/HomeHero'
-import GridSection from '../components/Home/GridSection'
+import { Section } from '../components/Home/GridSection'
 import TextSection from '../components/Home/TextSection'
 import { contractAddress, description, githubUrl, openSeaCollectionUrl, polygonScanUrl, title, twitterUrl } from '../config'
 import LastMintedSection from '../components/Home/LastMintedSection'
 import { sectionSubtitle } from '../components/Titles'
+import cover1 from '../assets/cover-3x12-1.png'
+import cover2 from '../assets/cover-3x12-2.png'
+import cover3 from '../assets/cover-3x12-3.png'
 
-const Home: NextPage<{ images: string[][] }> = ({ images }) => {
+const Home: NextPage<{ /*images: string[][] */ }> = () => {
   return (
     <>
       <HomeHero title={title} description={description} />
@@ -24,11 +27,19 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
         </p>
       </section>
 
-      <GridSection images={images[0]} />
-
+      <Section>
+        <div className="relative w-full" style={{ paddingBottom: `${3 / 12 * 100}%` }}>
+          <Image quality={90} src={cover1.src} alt={"Dicks cover"} layout='fill' />
+        </div>
+      </Section> 
+      
       <FeaturesSection />
       
-      <GridSection images={images[1]} />
+      <Section>
+        <div className="relative w-full" style={{ paddingBottom: `${3 / 12 * 100}%` }}>
+          <Image quality={90} src={cover2.src} alt={"Dicks cover"} layout='fill' />
+        </div>
+      </Section>
       
       <TextSection title="what is SpaceDicks?">
         <p>
@@ -114,7 +125,11 @@ const Home: NextPage<{ images: string[][] }> = ({ images }) => {
         </ol>
       </TextSection>
 
-      <GridSection disableMarginBottom images={images[2]} />
+      <Section disableMarginBottom>
+        <div className="relative w-full" style={{ paddingBottom: `${3 / 12 * 100}%` }}>
+          <Image quality={90} src={cover3.src} alt={"Dicks cover"} layout='fill' />
+        </div>
+      </Section>
     </>
   )
 }
@@ -123,17 +138,17 @@ export default Home
 
 // Fetch images for API only on build
 // will be passed to the page component as props
-export async function getStaticProps(context: AppContext) {
-  const line = 12 // one line is 12 columns
-  const section = 3 * line // one section is 3 lines
-  const randomImages = getRandomImages(3 * section)
-  return {
-    props: {
-      images: [
-        randomImages.slice(0, section),
-        randomImages.slice(section, 2 * section),
-        randomImages.slice(2 * section, 3 * section),
-      ],
-    }, 
-  }
-}
+// export async function getStaticProps(context: AppContext) {
+//   const line = 12 // one line is 12 columns
+//   const section = 3 * line // one section is 3 lines
+//   const randomImages = getRandomImages(3 * section)
+//   return {
+//     props: {
+//       images: [
+//         randomImages.slice(0, section),
+//         randomImages.slice(section, 2 * section),
+//         randomImages.slice(2 * section, 3 * section),
+//       ],
+//     }, 
+//   }
+// }

@@ -42,8 +42,12 @@ function LastMintedSection() {
 
         <ul className="flex flex-wrap -mx-3">
           {data.map(item => (
-            <li key={item.id} onClick={() => setSelected(item)} className="cursor-pointer px-3 mb-6 hover:text-purple-300 w-1/2 sm:w-1/4 ">
-              <div style={{ aspectRatio: "1/1", maxWidth: 300 }} className="relative overflow-hidden rounded-lg mb">
+            <li 
+              key={item.id} 
+              onClick={() => setSelected(item)} 
+              className="cursor-pointer px-3 mb-6 hover:text-purple-300 w-1/2 sm:w-1/4 "
+            >
+              <div style={{ maxWidth: 300 }} className="relative square overflow-hidden rounded-lg mb">
                 <Image src={API_URL + "/svg" + item.path} alt={`SpaceDicks #${item.id}`} layout="fill" />
               </div>
               <span className="font-mono text-sm">
@@ -59,8 +63,8 @@ function LastMintedSection() {
             open={modalOpen}
             content={(
               <>
-                <div style={{ aspectRatio: "1/1", maxWidth: 500 }} className="relative m-auto w-full overflow-hidden rounded-lg">
-                  <Image src={API_URL + "/svg" + selected.path} alt={"SpaceDicks"} layout="fill" />
+                <div style={{ maxWidth: 500 }} className="relative square m-auto overflow-hidden rounded-lg">
+                  <Image quality={90} src={API_URL + "/svg" + selected.path} alt={"SpaceDicks"} layout="fill" />
                 </div>
                 <p className="font-mono">
                   See open <a href={selected.openseaUrl} target={"_blank"} rel="noreferrer">Opensea</a>.

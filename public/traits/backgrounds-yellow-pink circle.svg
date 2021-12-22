@@ -1,0 +1,8 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>background 12</title>	
+			<defs><radialGradient id="yellow-to-pink-circle" cx="0.5" cy="0.5" r="0.716" gradientTransform="matrix(0.999, -0.034, 0.034, 0.999, -0.017, 0.017)" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#ff80ff"/>
+			<stop offset="1" stop-color="#ffff80"/>
+		</radialGradient></defs>
+			<rect width="96" height="96" fill="url(#yellow-to-pink-circle)"/>
+		</svg>

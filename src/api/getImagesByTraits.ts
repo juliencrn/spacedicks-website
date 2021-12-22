@@ -16,6 +16,7 @@ export interface TraitOption {
   name: string
   rarity: number
   url: string
+  traitName: string
 }
 
 export interface ImagesByTrait {
@@ -47,6 +48,7 @@ export function getImagesByTraits(traits: Record<string, string[]>): ImagesByTra
         name: options[j],
         rarity: 100 * size / 1e5,
         url: `${API_URL}/svg-trait/${singularName}/${j}`,
+        traitName: name
       })
     }
 

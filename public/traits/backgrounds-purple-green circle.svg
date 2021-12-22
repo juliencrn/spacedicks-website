@@ -1,0 +1,9 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>background 13</title>	
+			<defs><radialGradient id="purple-to-green-circle" cx="0.5" cy="0.5" r="0.727" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#50ffb1" stop-opacity="0.886"/>
+			<stop offset="0.665" stop-color="#9381ff" stop-opacity="0.886"/>
+			<stop offset="1" stop-color="#ff50f8" stop-opacity="0.886"/>
+		</radialGradient></defs>
+			<rect width="96" height="96" fill="url(#purple-to-green-circle)"/>
+		</svg>

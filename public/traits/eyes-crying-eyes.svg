@@ -1,0 +1,33 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>eye 4</title>	
+			<defs><linearGradient id="blue-to-blue-45" x1="1.015" y1="-0.888" x2="-0.045" y2="1.333" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#6f73d2"/>
+			<stop offset="1" stop-color="#83c9f4"/>
+		</linearGradient><filter id="picasso-small-eye-filter" x="34.462" y="26.542" width="21.656" height="20.781" filterUnits="userSpaceOnUse">
+			<feOffset dy="3" input="SourceAlpha"/>
+			<feGaussianBlur stdDeviation="3" result="blur-2"/>
+			<feFlood flood-opacity="0.161"/>
+			<feComposite operator="in" in2="blur-2"/>
+			<feComposite in="SourceGraphic"/>
+		</filter></defs>
+			<rect width="96" height="96" fill="#ffc6ff"/><g id="dick" transform="translate(96 98) rotate(180)">
+      <rect width="15" height="51.915" rx="7.5" transform="translate(40.5 22)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(31 18)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(46 18)" fill="url(#blue-to-blue-45)"/>
+    </g><g id="crying-eyes" transform="translate(0 1)">
+			<g transform="translate(24.808 13.364)">
+				<g transform="matrix(1, 0, 0, 1, -24.81, -13.36)" filter="url(#picasso-small-eye-filter)">
+					<path d="M-138.23-1098.856s1.613-2.95,3.424,0C-136.5-1096.041-138.23-1098.856-138.23-1098.856Z" transform="translate(181.81 1132.82)" fill="rgba(255,255,255,0.9)" stroke="#000" stroke-width="0.2"/>
+				</g>
+				<circle cx="0.5" cy="0.5" r="0.5" transform="translate(20 20)"/>
+			</g>
+			<g transform="translate(30.808 13.364)">
+				<g transform="matrix(1, 0, 0, 1, -30.81, -13.36)" filter="url(#picasso-small-eye-filter)">
+					<path d="M-138.23-1098.856s1.613-2.95,3.424,0C-136.5-1096.041-138.23-1098.856-138.23-1098.856Z" transform="translate(187.81 1132.82)" fill="rgba(255,255,255,0.9)" stroke="#000" stroke-width="0.2"/>
+				</g>
+				<circle cx="0.5" cy="0.5" r="0.5" transform="translate(20 20)"/>
+			</g>
+			<path d="M1014.946,626.706c.043-.147.018-.037-.135.341s.135.493.135.493.089.108.3,0,.152-.4.152-.4l-.267-1.183-.057.35S1014.9,626.853,1014.946,626.706Z" transform="translate(-970 -590.604)" fill="#fff"/>
+			<path d="M1014.946,626.706c.043-.147.018-.037-.135.341s.135.493.135.493.089.108.3,0,.152-.4.152-.4l-.267-1.183-.057.35S1014.9,626.853,1014.946,626.706Z" transform="translate(-964 -590.604)" fill="#fff"/>
+		</g>
+		</svg>

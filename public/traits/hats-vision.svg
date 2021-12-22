@@ -1,0 +1,22 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>hat 14</title>	
+			<defs><linearGradient id="blue-to-blue-45" x1="1.015" y1="-0.888" x2="-0.045" y2="1.333" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#6f73d2"/>
+			<stop offset="1" stop-color="#83c9f4"/>
+		</linearGradient><radialGradient id="rainbow-circle-transparent" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#ffc6ff" stop-opacity="0.82"/>
+			<stop offset="0.099" stop-color="#fdffb6" stop-opacity="0.565"/>
+			<stop offset="0.148" stop-color="#bdb2ff" stop-opacity="0.678"/>
+			<stop offset="0.153" stop-color="#adbcff" stop-opacity="0.718"/>
+			<stop offset="0.276" stop-color="#a0c4ff" stop-opacity="0.749"/>
+			<stop offset="0.435" stop-color="#9bf6ff" stop-opacity="0.745"/>
+			<stop offset="0.567" stop-color="#caffbf" stop-opacity="0.765"/>
+			<stop offset="0.857" stop-color="#ffd6a5" stop-opacity="0.745"/>
+			<stop offset="1" stop-color="#ffadad" stop-opacity="0.82"/>
+		</radialGradient></defs>
+			<rect width="96" height="96" fill="#ffc6ff"/><ellipse id="vision" cx="22.5" cy="13" rx="22.5" ry="13" transform="translate(26 15)" fill="url(#rainbow-circle-transparent)"/><g id="dick" transform="translate(96 98) rotate(180)">
+      <rect width="15" height="51.915" rx="7.5" transform="translate(40.5 22)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(31 18)" fill="url(#blue-to-blue-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(46 18)" fill="url(#blue-to-blue-45)"/>
+    </g>
+		</svg>

@@ -1,0 +1,12 @@
+<svg width="600" height="600" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+			<title>skin 6</title>	
+			<defs><linearGradient id="shades-of-purple-45" x1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+		<stop offset="0" stop-color="#c4b5fd"/>
+		<stop offset="1" stop-color="#a78bfa"/>
+	  </linearGradient></defs>
+			<rect width="96" height="96" fill="#ffc6ff"/><g id="dick" transform="translate(96 98) rotate(180)">
+      <rect width="15" height="51.915" rx="7.5" transform="translate(40.5 22)" fill="url(#shades-of-purple-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(31 18)" fill="url(#shades-of-purple-45)"/>
+      <ellipse cx="9.5" cy="9" rx="9.5" ry="9" transform="translate(46 18)" fill="url(#shades-of-purple-45)"/>
+    </g>
+		</svg>
