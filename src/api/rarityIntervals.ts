@@ -9,3 +9,4 @@
 // export const specialItems = [2000, 1000, 0]
 
 // export const intervals = [backgroundItems, skinItems, hatItems, eyeItems, mouseItems, clotheItems, armItems, specialItems]
+export {};

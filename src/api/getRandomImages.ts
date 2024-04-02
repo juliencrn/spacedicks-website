@@ -53,3 +53,4 @@
 
 //   return Array.from(paths).map((path, i) => `${API_URL}/svg/${i}/${path}`)
 // }
+export {};

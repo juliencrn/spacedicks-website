@@ -26,7 +26,7 @@
 //   useUpdateEffect(() => {
 //     if (!modalOpen) setSelected(null)
 //   }, [modalOpen])
-  
+
 //   return (
 //     <>
 //       {traits.map(trait => (
@@ -96,3 +96,4 @@
 //     throw new Error("Could not fetch api/stats")
 //   }
 // }
+export { };
