@@ -9,7 +9,7 @@ import { BurgerIcon } from '../Icons'
 import { sectionSubtitle } from '../Titles'
 import ConnectButton from './ConnectButton'
 
-const NavigationBar =() => {
+const NavigationBar = () => {
   const menuRef = useRef<HTMLDivElement>(null)
   const [open, setOpen] = useState<boolean>(false)
   const isDesktop = useMediaQuery(`(min-width: ${mediaQueries.md})`)
@@ -38,19 +38,19 @@ const NavigationBar =() => {
         <button type="button" className="block md:hidden" onClick={toggle}>
           <BurgerIcon />
         </button>
-        
+
         <ul className={`${showMobileMenu ? "px-6 py-2 w-full absolute top-20 left-0" : "hidden"} md:flex font-mono text-sm sm:text-base font-medium bg-gray-900`}>
-          <li className="mr-6 my-auto py-2">
+          {/* <li className="mr-6 my-auto py-2">
             <Link href="/traits">
               <a className="/traits" href="#">Traits</a>
             </Link>
-          </li>
+          </li> */}
           <li className="my-auto py-2">
             <ConnectButton />
           </li>
         </ul>
       </div>
-    </Headroom> 
+    </Headroom>
   )
 }
 
