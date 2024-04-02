@@ -3,9 +3,6 @@
   "private": true,
   "author": "juliencrn",
   "license": "MIT",
-  "engines": {
-    "node": "16.13.0"
-  },
   "scripts": {
     "clean": "rm -rf ./.next ./out",
     "dev": "next dev",
